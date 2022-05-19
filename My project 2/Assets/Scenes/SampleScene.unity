@@ -305,7 +305,7 @@ GameObject:
   m_Component:
   - component: {fileID: 173275927}
   m_Layer: 0
-  m_Name: Gilf (8)
+  m_Name: Gilf8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -635,7 +635,7 @@ GameObject:
   m_Component:
   - component: {fileID: 802883408}
   m_Layer: 0
-  m_Name: Gilf (4)
+  m_Name: Gilf4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -695,7 +695,7 @@ Transform:
   - {fileID: 1172186789}
   - {fileID: 173275927}
   m_Father: {fileID: 1866201413}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 17.15}
 --- !u!1 &871767337
 GameObject:
@@ -722,7 +722,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 871767337}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -963,7 +963,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1021533964}
   m_Layer: 0
-  m_Name: Gilf (2)
+  m_Name: Gilf2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1234,7 +1234,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1080073094}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.1, y: 2.4, z: 0}
+  m_LocalPosition: {x: 0.4, y: 2.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1271,7 +1271,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1866201413}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 17.15}
 --- !u!212 &1132255639
 SpriteRenderer:
@@ -1507,7 +1507,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1172186789}
   m_Layer: 0
-  m_Name: Gilf (7)
+  m_Name: Gilf7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1711,7 +1711,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1279627395}
   m_Layer: 0
-  m_Name: Gilf (5)
+  m_Name: Gilf5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1743,7 +1743,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1445249225}
   m_Layer: 0
-  m_Name: Gilf (1)
+  m_Name: Gilf1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1947,7 +1947,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1692054241}
   m_Layer: 0
-  m_Name: Gilf (3)
+  m_Name: Gilf3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2172,8 +2172,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1132255638}
   - {fileID: 867069353}
+  - {fileID: 1132255638}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2343,6 +2343,7 @@ MonoBehaviour:
   numberOfGift: 9
   timeRotate: 3
   numRound: 4
+  colorGift: {fileID: 871767339}
   parrent: {fileID: 867069353}
   curve:
     serializedVersion: 2
@@ -2378,7 +2379,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1951180448}
   m_Layer: 0
-  m_Name: Gilf (6)
+  m_Name: Gilf6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

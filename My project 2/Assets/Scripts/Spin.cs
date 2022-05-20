@@ -29,11 +29,29 @@ public class Spin : MonoBehaviour
 
     public AnimationCurve curve;
     private bool isCoroutine;
+
+    public static Spin destroy;
+
+    private int currentSceneIndex;
+
     public void Start()
     {
+
+        if (destroy != null)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+        
+        
+        destroy = this;
+        GameObject.DontDestroyOnLoad(this.gameObject);
+
         isCoroutine = true;
         angleOneGift = CIRCLE / numberOfGift;
         setData();
+
+        
     }
 
     private IEnumerator RotateWheel()
@@ -45,7 +63,7 @@ public class Spin : MonoBehaviour
         //int indexGiftRandom = UnityEngine.Random.Range(1, numberOfGift);
         Debug.Log(giftWheel + " tim");
 
-        float angleWant = (numRound * CIRCLE) + angleOneGift * giftWheel - startAngel;
+        float angleWant = (numRound * CIRCLE) + angleOneGift * giftWheel + startAngel;
 
         while (currentTime < timeRotate)
         {
@@ -53,7 +71,7 @@ public class Spin : MonoBehaviour
             currentTime += Time.deltaTime;
 
             float angleCurrent = angleWant * curve.Evaluate(currentTime / timeRotate);
-            this.transform.eulerAngles = new Vector3(0, 0, angleCurrent + startAngel);
+            this.transform.eulerAngles = new Vector3(0, 0, angleCurrent - startAngel);
         }
         isCoroutine = true;
 
@@ -62,41 +80,65 @@ public class Spin : MonoBehaviour
             case 1:
                 colorGift = GameObject.Find("/Wheel Round/List Data/Gilf/Text (TMP)").GetComponent<TextMeshPro>();
                 colorGift.color = new Color(255, 0, 0, 255);
+                
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
                 break;
             case 2:
                 colorGift = GameObject.Find("/Wheel Round/List Data/Gilf1/Text (TMP)").GetComponent<TextMeshPro>();
                 colorGift.color = new Color(255, 0, 0, 255);
+
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                
                 break;
             case 3:
                 colorGift = GameObject.Find("/Wheel Round/List Data/Gilf2/Text (TMP)").GetComponent<TextMeshPro>();
                 colorGift.color = new Color(255, 0, 0, 255);
+
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                
                 break;
             case 4:
                 colorGift = GameObject.Find("/Wheel Round/List Data/Gilf3/Text (TMP)").GetComponent<TextMeshPro>();
                 colorGift.color = new Color(255, 0, 0, 255);
+
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                
                 break;
             case 5:
                 colorGift = GameObject.Find("/Wheel Round/List Data/Gilf4/Text (TMP)").GetComponent<TextMeshPro>();
                 colorGift.color = new Color(255, 0, 0, 255);
+
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                
                 break;
             case 6:
                 colorGift = GameObject.Find("/Wheel Round/List Data/Gilf5/Text (TMP)").GetComponent<TextMeshPro>();
                 colorGift.color = new Color(255, 0, 0, 255);
+
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+               
                 break;
             case 7:
                 colorGift = GameObject.Find("/Wheel Round/List Data/Gilf6/Text (TMP)").GetComponent<TextMeshPro>();
                 colorGift.color = new Color(255, 0, 0, 255);
+
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+               
                 break;
             case 8:
                 colorGift = GameObject.Find("/Wheel Round/List Data/Gilf7/Text (TMP)").GetComponent<TextMeshPro>();
                 colorGift.color = new Color(255, 0, 0, 255);
+
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                
                 break;
             case 9:
                 colorGift = GameObject.Find("/Wheel Round/List Data/Gilf8/Text (TMP)").GetComponent<TextMeshPro>();
                 colorGift.color = new Color(255, 0, 0, 255);
-                break;
-            case 10:
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+               
                 break;
 
         }
@@ -110,6 +152,10 @@ public class Spin : MonoBehaviour
             audioSource.PlayOneShot(wheelRound);
         }
 
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            SceneManager.LoadScene(0);
+        }
     }
 
     void RotateNow()

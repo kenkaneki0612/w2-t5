@@ -2191,7 +2191,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wheelRound: {fileID: 8300000, guid: 2af3982eb3013b549be7fd146f7d8526, type: 3}
   audioSource: {fileID: 1866201415}
-  giftWheel: 2
   wintext: {fileID: 561741422}
   section: 9
   giftName:
@@ -2204,6 +2203,7 @@ MonoBehaviour:
   - "Ph\u1EA7n th\u01B0\u1EDFng: 7 tim"
   - "Ph\u1EA7n th\u01B0\u1EDFng: 8 v\xE0ng"
   - "Ph\u1EA7n th\u01B0\u1EDFng: 9 v\xE0ng"
+  colorGift: {fileID: 0}
   parrent: {fileID: 867069353}
   curve:
     serializedVersion: 2
@@ -2337,7 +2337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ac6bd6816d1ea54e9e47e0d3271c254, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  giftWheel: 5
+  giftWheel: 1
   wheelRound: {fileID: 8300000, guid: 2af3982eb3013b549be7fd146f7d8526, type: 3}
   audioSource: {fileID: 1866201415}
   numberOfGift: 9
